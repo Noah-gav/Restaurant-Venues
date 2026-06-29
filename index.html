@@ -273,7 +273,7 @@ header { background:var(--navy); position:sticky; top:0; z-index:100; box-shadow
       <div class="tab" onclick="setTab(&#39;F&amp;B&#39;,this)">🍽️ Restaurants</div>
       <div class="tab" onclick="setTab(&#39;Venue&#39;,this)">🏛️ Venues</div>
     </div>
-    <div style="display:flex;gap:8px;align-items:center;"><button onclick="openEditModal()" style="background: rgba(255, 255, 255, 0.15); color: white; border: 1px solid rgba(255, 255, 255, 0.4); padding: 8px 20px; border-radius: 6px; font-family: &quot;DM Sans&quot;, sans-serif; font-size: 12px; font-weight: 700; cursor: pointer; letter-spacing: 1px; text-transform: uppercase;" onmouseover="this.style.background=&#39;rgba(255,255,255,0.28)&#39;" onmouseout="this.style.background=&#39;rgba(255,255,255,0.15)&#39;">✏️ Edit</button><button class="btn-add" onclick="openAddModal()">＋ Add a venue</button></div>
+    <div style="display:flex;gap:8px;align-items:center;"><button onclick="openEditModal()" style="background: rgba(255, 255, 255, 0.15); color: white; border: 1px solid rgba(255, 255, 255, 0.4); padding: 8px 20px; border-radius: 6px; font-family: &quot;DM Sans&quot;, sans-serif; font-size: 12px; font-weight: 700; cursor: pointer; letter-spacing: 1px; text-transform: uppercase;" onmouseover="this.style.background=&#39;rgba(255,255,255,0.28)&#39;" onmouseout="this.style.background=&#39;rgba(255,255,255,0.15)&#39;">✏️ Edit</button><button class="btn-add" onclick="onAddModal()">＋ Add a venue</button></div>
   </div>
 </header>
 
@@ -3033,3 +3033,34 @@ function closeDetailIfBg(e){ if(e.target===document.getElementById('detail-modal
         
       </div>
     </div>
+<script>
+function generateCode(data) {
+  return `
+{
+  name: "${data.name}",
+  city: "${data.city}",
+  address: "${data.address}",
+  email: "${data.email}",
+  phone: "${data.phone}",
+  website: "${data.website}"
+},
+`;
+}
+
+function onAddPlace() {
+  const name = prompt("Nom du lieu ?");
+  const city = prompt("Ville ?");
+  const address = prompt("Adresse ?");
+  const email = prompt("Email ?");
+  const phone = prompt("Téléphone ?");
+  const website = prompt("Website ?");
+
+  const data = { name, city, address, email, phone, website };
+
+  const code = generateCode(data);
+
+  navigator.clipboard.writeText(code);
+
+  alert("✅ Code généré et copié ! Va sur GitHub et colle-le.");
+}
+</script>
