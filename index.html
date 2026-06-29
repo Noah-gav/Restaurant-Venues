@@ -273,7 +273,7 @@ header { background:var(--navy); position:sticky; top:0; z-index:100; box-shadow
       <div class="tab" onclick="setTab(&#39;F&amp;B&#39;,this)">🍽️ Restaurants</div>
       <div class="tab" onclick="setTab(&#39;Venue&#39;,this)">🏛️ Venues</div>
     </div>
-    <div style="display:flex;gap:8px;align-items:center;"><button onclick="openEditModal()" style="background: rgba(255, 255, 255, 0.15); color: white; border: 1px solid rgba(255, 255, 255, 0.4); padding: 8px 20px; border-radius: 6px; font-family: &quot;DM Sans&quot;, sans-serif; font-size: 12px; font-weight: 700; cursor: pointer; letter-spacing: 1px; text-transform: uppercase;" onmouseover="this.style.background=&#39;rgba(255,255,255,0.28)&#39;" onmouseout="this.style.background=&#39;rgba(255,255,255,0.15)&#39;">✏️ Edit</button><button class="btn-add" onclick="onAddModal()">＋ Add a venue</button></div>
+    <div style="display:flex;gap:8px;align-items:center;"><button onclick="openEditModal()" style="background: rgba(255, 255, 255, 0.15); color: white; border: 1px solid rgba(255, 255, 255, 0.4); padding: 8px 20px; border-radius: 6px; font-family: &quot;DM Sans&quot;, sans-serif; font-size: 12px; font-weight: 700; cursor: pointer; letter-spacing: 1px; text-transform: uppercase;" onmouseover="this.style.background=&#39;rgba(255,255,255,0.28)&#39;" onmouseout="this.style.background=&#39;rgba(255,255,255,0.15)&#39;">✏️ Edit</button><button class="btn-add" onclick="openAddModal()">＋ Add a venue</button></div>
   </div>
 </header>
 
@@ -2174,7 +2174,7 @@ header { background:var(--navy); position:sticky; top:0; z-index:100; box-shadow
     </div>
     <div class="card" onclick="openDetailByIdx(82)">
       <div class="card-header">
-        <div class="card-name">Test 30 <span style="font-size:10px;opacity:0.6">★ Added</span></div>
+        <div class="card-name">Test 2 <span style="font-size:10px;opacity:0.6">★ Added</span></div>
         <div class="card-badges">
           <span class="badge badge-cat-FB">F&amp;B</span>
           
@@ -2340,15 +2340,37 @@ header { background:var(--navy); position:sticky; top:0; z-index:100; box-shadow
         <button class="btn-secondary" onclick="closeAddModal()">Cancel</button>
         <span class="copy-success" id="add-success" style="color:var(--red);">✓ Added!</span>
       </div>
-      <div style="margin-top:16px; padding:12px; background:var(--light); border-radius:8px; border-left:3px solid var(--red);">
-        <p style="font-size:11px; color:var(--muted); line-height:1.6;">
-          <strong style="color:var(--navy);">💡 Note :</strong> Les établissements ajoutés sont sauvegardés dans votre navigateur (localStorage). 
-          Pour les intégrer définitivement dans le fichier, exportez la liste via le bouton <strong>Export JSON</strong> et envoyez-la pour mise à jour.
-        </p>
+      <!-- ── GitHub Code Generator ── -->
+      <div id="github-code-panel" style="display:none; margin-top:18px;">
+        <div style="background:#0d1117; border-radius:10px; overflow:hidden; border:1px solid #30363d; box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+          <!-- Header -->
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 16px; background:#161b22; border-bottom:1px solid #30363d;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="#8b949e"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+              <span style="font-size:12px; font-weight:700; color:#8b949e; text-transform:uppercase; letter-spacing:1px;">GitHub — Code à copier</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span id="github-copy-ok" style="display:none; font-size:11px; color:#3fb950; font-weight:700;">✓ Copié !</span>
+              <button onclick="copyGithubCode()" style="display:flex; align-items:center; gap:5px; background:#21262d; border:1px solid #30363d; color:#c9d1d9; padding:5px 12px; border-radius:6px; font-size:11px; font-weight:700; cursor:pointer; transition:background 0.15s; font-family:'DM Sans',sans-serif;" onmouseover="this.style.background='#30363d'" onmouseout="this.style.background='#21262d'">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"/></svg>
+                Copier
+              </button>
+            </div>
+          </div>
+          <!-- Instruction -->
+          <div style="padding:8px 16px 4px; background:#161b22; border-bottom:1px solid #21262d;">
+            <p style="font-size:10px; color:#6e7681; line-height:1.5; margin:0;">Collez ce bloc dans le tableau <code style="background:#21262d; color:#79c0ff; padding:1px 5px; border-radius:3px; font-size:10px;">DATA</code> du fichier <code style="background:#21262d; color:#79c0ff; padding:1px 5px; border-radius:3px; font-size:10px;">index.html</code> sur GitHub pour intégrer cet établissement en permanent.</p>
+          </div>
+          <!-- Code block -->
+          <pre id="github-code-block" style="margin:0; padding:16px; font-family:'Courier New',monospace; font-size:12px; line-height:1.7; color:#c9d1d9; overflow-x:auto; background:#0d1117; white-space:pre;"></pre>
+        </div>
       </div>
-      <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
-        <button class="btn-secondary" onclick="exportCustom()" style="font-size:11px;">📤 Export my additions (JSON)</button>
+
+      <!-- Export / Clear -->
+      <div style="margin-top:14px; display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+        <button class="btn-secondary" onclick="exportCustom()" style="font-size:11px;">📤 Export additions (JSON)</button>
         <button class="btn-secondary" onclick="clearCustom()" style="font-size:11px; color:#cc0000;">🗑️ Supprimer tous mes ajouts</button>
+        <span style="font-size:10px; color:var(--muted); margin-left:auto;">💾 Sauvegardé dans le navigateur</span>
       </div>
     </div>
   </div>
@@ -2587,6 +2609,9 @@ function closeAddModal() {
     .forEach(id => document.getElementById(id).value = '');
   document.getElementById('add-categorie').value = 'F&B';
   document.getElementById('add-tarif').value = '';
+  // Reset code panel
+  const panel = document.getElementById('github-code-panel');
+  if (panel) panel.style.display = 'none';
 }
 
 function saveNewEntry() {
@@ -2611,9 +2636,53 @@ function saveNewEntry() {
   saveCustom(custom);
   populateVilles();
   render();
+  // Success badge
   const s = document.getElementById('add-success');
   s.classList.add('show');
-  setTimeout(() => { s.classList.remove('show'); closeAddModal(); }, 1500);
+  setTimeout(() => s.classList.remove('show'), 2200);
+  // Generate + show GitHub code
+  generateGithubCode(entry);
+}
+
+function generateGithubCode(entry) {
+  const esc = v => (v || '').replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+  const fields = [
+    ['nom',       entry.nom],
+    ['ville',     entry.ville],
+    ['region',    entry.region || ''],
+    ['categorie', entry.categorie],
+    ['tarif',     entry.tarif],
+    ['capacite',  entry.capacite],
+    ['cuisine',   entry.cuisine],
+    ['features',  entry.features],
+    ['horaires',  entry.horaires],
+    ['adresse',   entry.adresse],
+    ['tel',       entry.tel],
+    ['email',     entry.email],
+    ['web',       entry.web],
+  ];
+  const lines = fields.filter(([k,v]) => v).map(([k,v]) => '  ' + k + ': "' + esc(v) + '"');
+  const code = '{\n' + lines.join(',\n') + ',\n  _base: true\n},';
+  const pre = document.getElementById('github-code-block');
+  pre.textContent = code;
+  const panel = document.getElementById('github-code-panel');
+  panel.style.display = 'block';
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  // Auto-copy
+  navigator.clipboard.writeText(code).then(() => {
+    const ok = document.getElementById('github-copy-ok');
+    ok.style.display = 'inline';
+    setTimeout(() => { ok.style.display = 'none'; }, 3000);
+  }).catch(() => {});
+}
+
+function copyGithubCode() {
+  const code = document.getElementById('github-code-block').textContent;
+  navigator.clipboard.writeText(code).then(() => {
+    const ok = document.getElementById('github-copy-ok');
+    ok.style.display = 'inline';
+    setTimeout(() => { ok.style.display = 'none'; }, 2500);
+  });
 }
 
 function exportCustom() {
@@ -3018,76 +3087,5 @@ function closeDetailIfBg(e){ if(e.target===document.getElementById('detail-modal
     </div>
   </div>
 </div>
-  <div class="card-body">
-        
-        <div class="card-row"><span class="card-icon">✨</span><span class="card-label">Highlights</span><span class="card-val">Breakfast</span></div>
-        <div class="card-row"><span class="card-icon">👥</span><span class="card-label">Capacity</span><span class="card-val">70–100 pers.</span></div>
-        <div class="card-row"><span class="card-icon">🕐</span><span class="card-label">Hours</span><span class="card-val">Mon-Fri: 06:30-22:30</span></div>
-        <div class="card-row"><span class="card-icon">📍</span><span class="card-label">Address</span><span class="card-val">Rue de Lausanne 14, 1201 Genève — <strong>Genève</strong></span></div>
-        <div class="card-row"><span class="card-icon">📞</span><span class="card-label">Tel.</span><span class="card-val">+41 22 716 80 00</span></div>
-      </div>
-      <div class="card-footer" onclick="event.stopPropagation()">
-        <button class="btn btn-email" onclick="openEmailModal({&quot;nom&quot;:&quot;Téséo&quot;,&quot;categorie&quot;:&quot;F&amp;B&quot;,&quot;capacite&quot;:&quot;70–100&quot;,&quot;tarif&quot;:&quot;€€&quot;,&quot;cuisine&quot;:&quot;&quot;,&quot;features&quot;:&quot;Breakfast&quot;,&quot;horaires&quot;:&quot;Mon-Fri: 06:30-22:30&quot;,&quot;ville&quot;:&quot;Genève&quot;,&quot;adresse&quot;:&quot;Rue de Lausanne 14, 1201 Genève&quot;,&quot;tel&quot;:&quot;+41 22 716 80 00&quot;,&quot;email&quot;:&quot;info.geneva@warwickhotels.com&quot;,&quot;web&quot;:&quot;https://www.teseorestaurant.com&quot;,&quot;region&quot;:&quot;Région genevoise&quot;,&quot;_base&quot;:true})">✉️ Booking email</button>
-        <a class="btn btn-web" href="https://www.teseorestaurant.com/" target="_blank">🌐 Website</a>
-        <a class="btn btn-maps" href="https://maps.google.com/?q=Rue%20de%20Lausanne%2014%2C%201201%20Gen%C3%A8ve" target="_blank">🗺️ Directions</a>
-        
-      </div>
-    </div>
 
-{
-  nom: "Téséo",
-  categorie: "F&B",
-  capacite: "70–100",
-  tarif: "€€",
-  cuisine: "",
-  features: "Breakfast",
-  horaires: "Mon-Fri: 06:30-22:30",
-  ville: "Genève",
-  adresse: "Rue de Lausanne 14, 1201 Genève",
-  tel: "+41 22 716 80 00",
-  email: "info.geneva@warwickhotels.com",
-  web: "https://www.teseorestaurant.com",
-  region: "Région genevoise",
-  _base: true
-},
-<script>
-function generateCode(data) {
-  return `
-{
-  name: "${data.name}",
-  city: "${data.city}",
-  address: "${data.address}",
-  email: "${data.email}",
-  phone: "${data.phone}",
-  website: "${data.website}"
-},
-`;
-}
-
-function onAddPlace() {
-  const name = prompt("Nom du lieu ?");
-  const city = prompt("Ville ?");
-  const address = prompt("Adresse ?");
-  const email = prompt("Email ?");
-  const phone = prompt("Téléphone ?");
-  const website = prompt("Website ?");
-
-  const data = { name, city, address, email, phone, website };
-
-  const code = generateCode(data);
-
-  navigator.clipboard.writeText(code);
-
-  alert("✅ Code généré et copié ! Va sur GitHub et colle-le.");
-}
-</script>
-  {
-  nom: "test",
-  ville: "Nyon",
-  categorie: "F&B",
-  capacite: "40",
-  features: "frefgref",
-  horaires: "12:32 :00/89",
-  email: "idfjnedeikm@djd.fr",
-  _base: true
-},
+</body></html>
