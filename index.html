@@ -3018,5 +3018,54 @@ function closeDetailIfBg(e){ if(e.target===document.getElementById('detail-modal
     </div>
   </div>
 </div>
+<!-- ✅ TON CODE TEST ICI -->
+<h2>Test - Ajouter un lieu</h2>
+
+<input id="name" placeholder="Nom"><br><br>
+<input id="city" placeholder="Ville"><br><br>
+<input id="address" placeholder="Adresse"><br><br>
+<input id="email" placeholder="Email"><br><br>
+<input id="phone" placeholder="Téléphone"><br><br>
+<input id="website" placeholder="Website"><br><br>
+
+<button onclick="onAddPlace()">Ajouter</button>
+
+<pre id="output" style="background:#eee;padding:10px;"></pre>
+
+<script>
+function generateCode(data) {
+  return `
+{
+  name: "${data.name}",
+  city: "${data.city}",
+  address: "${data.address}",
+  email: "${data.email}",
+  phone: "${data.phone}",
+  website: "${data.website}"
+},
+`;
+}
+
+function onAddPlace() {
+  const data = {
+    name: document.getElementById("name").value,
+    city: document.getElementById("city").value,
+    address: document.getElementById("address").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    website: document.getElementById("website").value
+  };
+
+  const code = generateCode(data);
+
+  document.getElementById("output").textContent = code;
+
+  navigator.clipboard.writeText(code);
+
+  alert("✅ Code copié !");
+}
+</script>
+
+</body>
 
 </body></html>
