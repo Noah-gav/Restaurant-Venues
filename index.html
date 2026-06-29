@@ -3018,54 +3018,27 @@ function closeDetailIfBg(e){ if(e.target===document.getElementById('detail-modal
     </div>
   </div>
 </div>
-<!-- ✅ TON CODE TEST ICI -->
-<h2>Test - Ajouter un lieu</h2>
-
-<input id="name" placeholder="Nom"><br><br>
-<input id="city" placeholder="Ville"><br><br>
-<input id="address" placeholder="Adresse"><br><br>
-<input id="email" placeholder="Email"><br><br>
-<input id="phone" placeholder="Téléphone"><br><br>
-<input id="website" placeholder="Website"><br><br>
-
-<button onclick="onAddPlace()">Ajouter</button>
-
-<pre id="output" style="background:#eee;padding:10px;"></pre>
-
-<script>
-function generateCode(data) {
-  return `
-{
-  name: "${data.name}",
-  city: "${data.city}",
-  address: "${data.address}",
-  email: "${data.email}",
-  phone: "${data.phone}",
-  website: "${data.website}"
-},
-`;
-}
-
-function onAddPlace() {
-  const data = {
-    name: document.getElementById("name").value,
-    city: document.getElementById("city").value,
-    address: document.getElementById("address").value,
-    email: document.getElementById("email").value,
-    phone: document.getElementById("phone").value,
-    website: document.getElementById("website").value
-  };
-
-  const code = generateCode(data);
-
-  document.getElementById("output").textContent = code;
-
-  navigator.clipboard.writeText(code);
-
-  alert("✅ Code copié !");
-}
-</script>
-
-</body>
-
-</body></html>
+/div>
+      <div class="card-body">
+        <div class="card-row"><span class="card-icon">🍽️</span><span class="card-label">Cuisine</span><span class="card-val">Boat / Cruise</span></div>
+        <div class="card-row"><span class="card-icon">✨</span><span class="card-label">Highlights</span><span class="card-val">Full or partial privatisation, Belle Époque fleet, lake experience</span></div>
+        <div class="card-row"><span class="card-icon">👥</span><span class="card-label">Capacity</span><span class="card-val">20–300 pers.</span></div>
+        
+        <div class="card-row"><span class="card-icon">📍</span><span class="card-label">Address</span><span class="card-val">Ports CGN — <strong>Genève – Nyon – Léman</strong></span></div>
+        <div class="card-row"><span class="card-icon">📞</span><span class="card-label">Tel.</span><span class="card-val">+41 84 881 18 48</span></div>
+      </div>
+      <div class="card-footer" onclick="event.stopPropagation()">
+        <button class="btn btn-email" onclick="openEmailModal({&quot;nom&quot;:&quot;CGN&quot;,&quot;categorie&quot;:&quot;Venue&quot;,&quot;capacite&quot;:&quot;20–300&quot;,&quot;tarif&quot;:&quot;&quot;,&quot;cuisine&quot;:&quot;Boat / Cruise&quot;,&quot;features&quot;:&quot;Full or partial privatisation, Belle Époque fleet, lake experience&quot;,&quot;horaires&quot;:&quot;&quot;,&quot;ville&quot;:&quot;Genève – Nyon – Léman&quot;,&quot;adresse&quot;:&quot;Ports CGN&quot;,&quot;tel&quot;:&quot;+41 84 881 18 48&quot;,&quot;email&quot;:&quot;groupes@cgn.ch&quot;,&quot;web&quot;:&quot;https://www.cgn.ch/fr/cgn-exclusive&quot;,&quot;region&quot;:&quot;Région de Nyon&quot;,&quot;_base&quot;:true})">✉️ Booking email</button>
+        <a class="btn btn-web" href="https://www.cgn.ch/fr/cgn-exclusive" target="_blank">🌐 Website</a>
+        <a class="btn btn-maps" href="https://maps.google.com/?q=Ports%20CGN" target="_blank">🗺️ Directions</a>
+        
+      </div>
+    </div>
+    <div class="card" onclick="openDetailByIdx(76)">
+      <div class="card-header">
+        <div class="card-name">Campus biotech</div>
+        <div class="card-badges">
+          <span class="badge badge-cat-Venue">Venue</span>
+          
+        </div>
+      
